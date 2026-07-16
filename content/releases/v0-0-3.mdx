@@ -1,0 +1,42 @@
+export const meta = {
+  slug: "v0-0-3",
+  version: "v0.0.3",
+  date: "July 16, 2026",
+  title: "Reliable external Pi discovery",
+  summary:
+    "Atlas v0.0.3 fixes external Pi detection in packaged desktop builds across macOS, Windows, and Linux, making existing Pi installations work much more reliably.",
+  status: "Alpha — not ready for a full production release",
+  note:
+    "This release focuses on improving compatibility for packaged applications by ensuring Atlas can consistently discover and launch an existing Pi installation.",
+  githubRelease: "https://github.com/IncuForge/atlas/releases/tag/v0.0.3",
+  highlights: [
+    "Fixes external Pi discovery in packaged desktop builds.",
+    "Resolves Pi using the user's login-shell PATH on macOS and Linux.",
+    "Adds support for Windows npm command shims such as pi.cmd.",
+    "Propagates the correct Node.js environment to Pi provider processes.",
+    "Improves reliability when loading providers and executing Pi commands.",
+    "Makes existing Pi installations work more consistently across supported platforms.",
+  ],
+};
+
+## Reliable Pi discovery
+
+Atlas now does a much better job of locating an existing Pi installation when running as a packaged desktop application. Earlier builds could fail to find Pi even though it was correctly installed and available from a terminal.
+
+This release resolves that behavior so Atlas can more consistently discover and use the Pi runtime across supported operating systems.
+
+## Better cross-platform compatibility
+
+On macOS and Linux, Atlas now resolves Pi using the user's login-shell `PATH`, matching the environment users expect when launching Pi from a terminal.
+
+On Windows, Atlas now supports the npm-generated command shims used by standard installations, including `pi.cmd`, making packaged builds work correctly without additional configuration.
+
+## More dependable provider startup
+
+The environment used to launch Pi providers has been improved so the correct Node.js environment is propagated when starting external processes. This makes provider loading and command execution more reliable, especially in packaged releases.
+
+## Continuing to improve Atlas
+
+This update is a focused compatibility release. While it doesn't introduce new user-facing features, it removes one of the biggest friction points for packaged installations and brings Atlas closer to the experience users expect from a local-first desktop application.
+
+[View the GitHub release](https://github.com/IncuForge/atlas/releases/tag/v0.0.3)
