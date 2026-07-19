@@ -1,0 +1,46 @@
+export const meta = {
+  slug: "v0-0-4",
+  version: "v0.0.4",
+  date: "July 18, 2026",
+  title: "Steadier model switching and packaged builds",
+  summary:
+    "Atlas v0.0.4 routes model changes through Pi's JSON-RPC interface more reliably, adds provider-aware thinking controls, and improves Pi discovery in packaged application environments.",
+  status: "Alpha — not ready for a full production release",
+  note:
+    "This release focuses on making everyday Compass interactions — switching models, adjusting reasoning depth, and finding Pi providers — behave consistently across supported platforms.",
+  githubRelease: "https://github.com/IncuForge/atlas/releases/tag/v0.0.4",
+  highlights: [
+    "Routes model changes reliably through Pi's JSON-RPC interface.",
+    "Adds provider-aware thinking and reasoning controls.",
+    "Improves Pi provider discovery and catalogue handling.",
+    "Supports packaged application environments more reliably.",
+    "Simplifies legacy settings routing.",
+    "Removes the obsolete telemetry-authoring skill.",
+  ],
+};
+
+## Steadier model switching
+
+Changing models in Compass now goes through Pi's JSON-RPC interface in a more consistent way, cutting down on the mismatches between what Compass shows and what Pi is actually running.
+
+## Provider-aware thinking controls
+
+Compass now surfaces thinking and reasoning controls that adapt to what the selected Pi provider actually supports, instead of presenting options that may not apply.
+
+## Better provider discovery
+
+Pi provider discovery and catalogue handling have been improved, making it easier for Compass to find configured providers and present an accurate, up-to-date list of models.
+
+## More reliable packaged builds
+
+Packaged application environments — the macOS, Windows, and Linux builds most people install — now resolve Pi and its providers more reliably, building on the discovery fixes from v0.0.3.
+
+## Cleaning up the edges
+
+Legacy settings routing has been simplified, and the obsolete telemetry-authoring skill has been removed along with an update to Compass's documentation and roadmap.
+
+## With credit
+
+Atlas is an independent IncuForge project informed by Warp, Zap, Pi, and the Pi package community. We are grateful for the work that continues to make this project possible.
+
+[View the GitHub release](https://github.com/IncuForge/atlas/releases/tag/v0.0.4)
