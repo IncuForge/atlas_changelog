@@ -1,0 +1,65 @@
+export const meta = {
+  slug: "v0-0-5",
+  version: "v0.0.5",
+  date: "July 21, 2026",
+  title: "Deeper Pi integration and richer profiles",
+  summary:
+    "Atlas v0.0.5 brings full Pi slash command support and native session trees to Compass, expands profiles with fine-grained model, web, MCP, and skill controls, and improves provider discovery and runtime reliability.",
+  status: "Alpha — not ready for a full production release",
+  note:
+    "This release leans into Pi-native features — slash commands, session trees, forking, and extension notifications — while giving profiles and model sets more control over how Compass behaves per workflow.",
+  githubRelease: "https://github.com/IncuForge/atlas/releases/tag/v0.0.5",
+  highlights: [
+    "Integrate all official Pi slash commands into Compass",
+    "Expand profiles with model, web access, MCP, and skill controls",
+    "Add reusable Pi model sets for scoped workflows",
+    "Improve provider discovery, custom provider configuration, and model selection",
+    "Add native handling for Pi extension notifications and interactive choices",
+    "Refresh onboarding, Herakles themes, and Compass settings interfaces",
+    "Improve session restoration, context reporting, and runtime reliability",
+    "Simplify release packaging and add SHA-256 artifact manifests",
+    "Update Atlas documentation, attribution, and website links",
+  ],
+};
+
+## Full Pi slash command support
+
+Compass now integrates all official Pi slash commands directly, so anything you could run through Pi itself is available without leaving Compass.
+
+## Session trees, forking, and queues
+
+Compass gains native support for Pi's follow-up queues, compaction state, session trees, and forking, making it easier to branch conversations and manage longer-running work.
+
+## Richer profiles
+
+Profiles have been expanded to cover model selection, web access, MCP configuration, and skill controls, giving each profile a more complete picture of how it should behave.
+
+## Reusable model sets
+
+Reusable Pi model sets let you define scoped groups of models once and apply them across workflows, instead of reconfiguring model choices each time.
+
+## Better provider and model discovery
+
+Provider discovery, custom provider configuration, and model selection have all been improved, making it easier to find and choose the right provider and model for the job.
+
+## Native extension notifications
+
+Compass now natively handles Pi extension notifications and interactive choices, so extensions can surface prompts and updates directly in the interface.
+
+## Refreshed interfaces
+
+Onboarding, Herakles themes, and Compass's settings interfaces have all been refreshed for a cleaner, more consistent experience.
+
+## Steadier sessions and runtime
+
+Session restoration, context reporting, and overall runtime reliability have been improved, reducing rough edges when resuming or monitoring long sessions.
+
+## Simpler packaging
+
+Release packaging has been simplified, and builds now include SHA-256 artifact manifests for easier verification.
+
+## With credit
+
+Atlas is an independent IncuForge project informed by Warp, Zap, Pi, and the Pi package community. We are grateful for the work that continues to make this project possible.
+
+[View the GitHub release](https://github.com/IncuForge/atlas/releases/tag/v0.0.5)
