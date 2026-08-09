@@ -1,0 +1,59 @@
+export const meta = {
+  slug: "v0-0-6",
+  version: "v0.0.6",
+  date: "August 6, 2026",
+  title: "Rock-solid sessions and richer package discovery",
+  summary:
+    "Atlas v0.0.6 hardens Pi session stability on Windows and Linux, adds pi.dev package catalog search, improves thinking-level handling, refines the slash command menu, and polishes the onboarding and settings experience.",
+  status: "Alpha — not ready for a full production release",
+  note: "This release focuses on stability — preventing stalled sessions, handling Pi process exits gracefully, and bounding memory — while also making it easier to discover packages and keeping the interface polished.",
+  githubRelease:
+    "https://github.com/IncuForge/atlas/releases/tag/v0.0.6",
+  highlights: [
+    "Prevent stderr backpressure from stalling Pi sessions on Windows and Linux",
+    "Surface Pi summarization retries and report stderr tail on unexpected exits",
+    "Read thinking levels directly from Pi instead of deriving them from catalogue metadata",
+    "Bound tool records retained per Compass session to manage memory",
+    "Add pi.dev package catalog search to Compass settings",
+    "Limit the slash menu to reproducible Pi built-ins and reject TUI-only commands",
+    "Match onboarding theme preview to the selected theme's brightness",
+    "Soften the agent watermark and normalize Compass settings spacing",
+    "Update Atlas documentation and contributor guidance",
+  ],
+};
+
+## Rock-solid session stability
+
+Pi sessions are now significantly more reliable on Windows and Linux. Atlas drains Pi's stderr continuously so a full OS pipe buffer can no longer backpressure and stall an active session. When the RPC process does exit unexpectedly, Atlas now captures and reports the tail of Pi's stderr output, making it much easier to diagnose what went wrong.
+
+## Reliable compaction and summarization
+
+Compass now surfaces Pi's summarization retries directly in the interface and clears the compaction indicator when a session fails, so stalled or failed compactions are visible rather than silently blocking context.
+
+Connected to the stability improvements, Compass also now bounds the number of tool records retained per session, preventing unbounded memory growth during long-running conversations.
+
+## Smarter thinking-level handling
+
+Thinking-level options are now read directly from the active Pi runtime instead of being derived from provider catalogue metadata. This means Compass always shows you the thinking and reasoning controls your actual Pi version supports, with no mismatch between what's listed and what's available.
+
+## Package catalog search
+
+Compass settings now include a package catalog search powered by the pi.dev catalogue. You can browse and search the Pi package ecosystem directly from within Atlas, making it easier to discover extensions, skills, themes, and tools without leaving the workspace.
+
+## Refined slash command menu
+
+The slash command menu now limits itself to Pi built-in commands that Compass can faithfully reproduce through JSON-RPC or native desktop equivalents. TUI-only commands that have no Compass equivalent are explicitly rejected, preventing mismatches between the menu and what actually works.
+
+## Polished interface
+
+The onboarding theme preview now matches the brightness of the currently selected theme, so you see an accurate representation of what your terminal will look like. Across Compass settings, spacing has been normalized and the agent watermark has been softened for a cleaner, less distracting appearance.
+
+## Documentation and project maintenance
+
+Atlas documentation, contributor guidance, and repository ignore rules have been updated to reflect current development practices and project structure.
+
+## With credit
+
+Atlas is an independent IncuForge project informed by Warp, Zap, Pi, and the Pi package community. We are grateful for the work that continues to make this project possible.
+
+[View the GitHub release](https://github.com/IncuForge/atlas/releases/tag/v0.0.6)
